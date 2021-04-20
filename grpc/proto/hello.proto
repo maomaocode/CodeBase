@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+service Hello {
+  rpc Hello (HelloReq) returns (HelloRes) {}
+  rpc HelloList (HelloReq) returns (stream HelloRes) {}
+}
+
+message HelloReq {
+  string name = 1;
+}
+
+
+message HelloRes {
+  string msg = 1;
+}
+
